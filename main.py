@@ -3,11 +3,14 @@ from random import randint
 
 def attack(char_name, char_class):
     if char_class == 'warrior':
-        return (f'{char_name} нанёс урон противнику равный {5 + randint(3, 5)}')
+        return (f'{char_name} нанёс урон противнику равный'
+                 '{5 + randint(3, 5)}')
     if char_class == 'mage':
-        return (f'{char_name} нанёс урон противнику равный {5 + randint(5, 10)}')
+        return (f'{char_name} нанёс урон противнику равный'
+                 '{5 + randint(5, 10)}')
     if char_class == 'healer':
-        return (f'{char_name} нанёс урон противнику равный {5 + randint(-3, -1)}')
+        return (f'{char_name} нанёс урон противнику равный'
+                 '{5 + randint(-3, -1)}')
 def defence(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
@@ -36,7 +39,7 @@ def start_training(char_name, char_class):
     print('Потренируйся управлять своими навыками.')
     print('Введи одну из команд: attack — чтобы атаковать противника, defence — чтобы блокировать атаку противника или special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
-    cmd = None
+    cmd = ''
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         if cmd == 'attack':
